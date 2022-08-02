@@ -1,0 +1,54 @@
+{
+  "name": "simple-fastify-scaffold",
+  "version": "0.0.1",
+  "description": "scaffold of a fastify server",
+  "exports": {
+    "./*": "./dist/*"
+  },
+  "type": "module",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/*"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "contributors": [
+    {
+      "name": "Elvis Yong",
+      "email": "elvisyong@gmail.com"
+    }
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "concurrently": "^7.2.1",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "nodemon": "^2.0.16",
+    "os": "^0.1.2",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "@fastify/cors": "^8.0.0",
+    "@fastify/sensible": "^5.1.0",
+    "dotenv": "^16.0.1",
+    "fastify": "^4.3.0",
+    "fastify-plugin": "^4.0.0",
+    "pino": "^8.0.0",
+    "pino-pretty": "^8.0.0"
+  }
+}
